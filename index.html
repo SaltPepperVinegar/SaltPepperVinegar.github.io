@@ -73,18 +73,23 @@
     }
     .card {
       background-color: #514683;
-      padding: 5rem 20rem;
+      padding: 5rem 5rem;
+      margin: 5rem 5rem ;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      min-width: 500px; 
     }
     footer {
       font-size: 0.9rem;
     }
     header h1 {
-        font-size: 2.75rem; /* Increased from default */
+        font-size: 3rem; /* Increased from default */
         margin: 0;
     }
-
+    h2 {
+        font-size: 2.25rem; /* Increased from default */
+        margin: 0;
+    }
 
     html, body {
         height: 100%;
@@ -92,7 +97,9 @@
         display: flex;
         flex-direction: column;
     }
-
+    project {
+        padding: 0rem 0rem;
+    }
     body {
     flex: 1;
     }
@@ -103,6 +110,8 @@
     .container {
     flex: 1;
     }
+
+
   </style>
 </head>
 <body>
@@ -123,63 +132,79 @@
 
     <div class="button-group">
         <a onclick="showSection('projects')"><h2>Projects</h2></a>
-        <a onclick="showSection('career')"><h2>Career</h2></a>
         <a onclick="showSection('skills')"><h2>Skills</h2></a>
+        <a onclick="showSection('career')"><h2>Career</h2></a>
+
     </div>
 </div>
 
 
 <div class="container">
   <section id="projects">
-    <h2>Projects</h2>
     <div class="vertical-layout">
       <div class="card">
-        <h3>Viceragenesis</h3>
-        <p>Project description here.</p>
+        <h2>Viceragenesis</h2>
+        </h2>
+        <h3>Long term Group Game Project
+        </h3>
+        <p>A 3d third-person platform jumping and beating game. You are a bug that tries to jump into the human body and defeat the immune system. 
+            A school group project aims for game mechanics development, 3d level building, shader development, particle system development and systematic game design document design. Achieved a score of 87 in the Comp30019 graphics and interaction. 
+            </p>
       </div>
       <div class="card">
-        <h3>Project Two</h3>
-        <p>Another project description here.</p>
+
+        <h2>To the End of Line 
+        </h2>
+        <h3>Long term Individual Game Project 
+        </h3>
+        <p>A top-down shooter game personal project about zombie shooting. 
+            Focuses on game mechanics design, NPC system & dialogue system development, inventory system development, animator implementation and Simple enemy logic development. 
+            </p>
       </div>
       <div class="card">
-        <h3>Project Two</h3>
-        <p>Another project description here.</p>
+        <h2>Ekko: The Long Lost Melodies</h2>
+        <h3>Game Jam Group Project 
+        </h3>
+        <p>A 3d third-person puzzle-solving game group project for Game Jam. The game is about a little robot using music to solve the puzzle. 
+            Focuses on game mechanics and game play design, aesthetic design, 3d animation development, and level building. 
+        </p>
       </div>
       <div class="card">
-        <h3>Project Two</h3>
-        <p>Another project description here.</p>
+        <h2>Trackline</h2>
+        <h3>Long term Group Game Project
+        </h3>
+        <p>In Trackline, players battle enemies by synchronizing their attacks to the beat of the music. 
+            Developed as part of a UMGMC group initiative, focuses on project management, team coordination, milestone planning, and quality assurance practices throughout its development lifecycle.
+            </p>
       </div>
       <div class="card">
-        <h3>Project Two</h3>
-        <p>Another project description here.</p>
+        <h2>Spell.EXE</h2>
+        <h3>
+            Game Jam Group Game Project
+        </h3>
+        <p>A 2D bullet-hell shooter focused on customizable spell creation.
+            Develop a modularspell system,  fast pace enemy bosses logic , a dynamic spell-building UI, a scalable level system, and complex enemy boss  AI.</p>
       </div>
     </div>
   </section>
 
   <section id="career">
-    <h2>Career</h2>
-    <div class="vertical-layout">
-      <div class="card">
-        <h3>Job Title at Company A</h3>
-        <p>Description of your role.</p>
-      </div>
-      <div class="card">
-        <h3>Job Title at Company B</h3>
-        <p>Another job description.</p>
-      </div>
-    </div>
+
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
     <div class="vertical-layout">
       <div class="card">
-        <h3>Languages</h3>
-        <p>Python, JavaScript, etc.</p>
+        <h2>Fluent </h2>
+        <p>Python, Git, Unity, C, C#.</p>
       </div>
       <div class="card">
-        <h3>Tools</h3>
-        <p>Unity, Git, Docker, etc.</p>
+        <h2>Capable </h2>
+        <p>Java, Haskell.</p>
+      </div>
+      <div class="card">
+        <h2>Basic </h2>
+        <p>Prolog, Html, Bash, MySQL .</p>
       </div>
     </div>
   </section>
