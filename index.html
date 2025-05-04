@@ -3,25 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name - Portfolio</title>
+  <title>CanghaiWang - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+20&display=swap" rel="stylesheet">
+  
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Jersey 20", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
       line-height: 1.6;
       color: #333;
+    background-color:#3e3370;
+    color: #D1CCE0;
     }
-    header, footer {
-      background: #333;
-      color: #fff;
-      padding: 1rem 2rem;
-      text-align: center;
+    header{
+        font-family: "Jersey 20", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #2D2452;
+        color: #D1CCE0;
+        padding: 10rem 2rem;
+        text-align: center;
+    }
+    footer{
+        background: #2D2452;
+        color: #D1CCE0;
+        padding: 2rem 2rem;
+        text-align: center;
     }
     nav a {
-      color: #fff;
+      color: #D1CCE0;
       margin: 0 1rem;
       text-decoration: none;
+      cursor: pointer;
     }
     .container {
       max-width: 1000px;
@@ -29,58 +43,160 @@
       padding: 2rem;
     }
     section {
-      margin-bottom: 3rem;
+      display: none; /* hide all by default */
+      margin-bottom: 4rem;
     }
-    h1, h2 {
-      color: #444;
+    section.active {
+      display: block;
     }
-    .project {
-      margin-bottom: 1.5rem;
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+    .button-group a {
+      padding: 0.75rem 10rem;
+      background: #e6d39a;
+      color: #2E2A1E;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .button-group a:hover {
+      background: #e6d39a;
+    }
+    .vertical-layout {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: #514683;
+      padding: 5rem 20rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     footer {
       font-size: 0.9rem;
+    }
+    header h1 {
+        font-size: 2.75rem; /* Increased from default */
+        margin: 0;
+    }
+
+
+    html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    body {
+    flex: 1;
+    }
+    p {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+    }
+    .container {
+    flex: 1;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Your Name</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <div class="header-content">
+        <img src="ryo.jpg" class="profile-icon" />
+    <div>
+    <h1>Canghai Wang</h1>
+    <h2>programmer, student,</h2>
+    <p>Hi! I'm Alex </p>
+    </div>
+    </div>
+
 </header>
 
-<div class="container">
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi! I'm a [your profession], passionate about [interests]. I enjoy building projects with [technologies or tools].</p>
-  </section>
+<div class="body">
 
+    <div class="button-group">
+        <a onclick="showSection('projects')"><h2>Projects</h2></a>
+        <a onclick="showSection('career')"><h2>Career</h2></a>
+        <a onclick="showSection('skills')"><h2>Skills</h2></a>
+    </div>
+</div>
+
+
+<div class="container">
   <section id="projects">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Project One</h3>
-      <p>Description of what the project does and why it's interesting.</p>
-    </div>
-    <div class="project">
-      <h3>Project Two</h3>
-      <p>Description of another cool project.</p>
+    <div class="vertical-layout">
+      <div class="card">
+        <h3>Viceragenesis</h3>
+        <p>Project description here.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>Another project description here.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>Another project description here.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>Another project description here.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>Another project description here.</p>
+      </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">yourprofile</a></p>
+  <section id="career">
+    <h2>Career</h2>
+    <div class="vertical-layout">
+      <div class="card">
+        <h3>Job Title at Company A</h3>
+        <p>Description of your role.</p>
+      </div>
+      <div class="card">
+        <h3>Job Title at Company B</h3>
+        <p>Another job description.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="vertical-layout">
+      <div class="card">
+        <h3>Languages</h3>
+        <p>Python, JavaScript, etc.</p>
+      </div>
+      <div class="card">
+        <h3>Tools</h3>
+        <p>Unity, Git, Docker, etc.</p>
+      </div>
+    </div>
   </section>
 </div>
 
 <footer>
-  &copy; 2025 Your Name. All rights reserved.
+  &copy; 2025 Canghai Wang. All rights reserved.
 </footer>
+
+<script>
+  function showSection(sectionId) {
+    const sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(sectionId).classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+</script>
 
 </body>
 </html>
